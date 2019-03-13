@@ -1,0 +1,112 @@
+body{
+  background-image: url("../images/background.jpg");
+}
+.event{
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.col-4 {
+  width: 33.33333%;
+  float: left;
+}
+.container {
+
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+table {
+  width: 100%;
+}
+.div{
+  font-family:URW Chancery L;
+  color:black;
+  font-size: x-large;
+}
+a{
+  color:black;
+  font-family:URW Chancery L;
+  font-size: xx-large;
+  text-decoration: none;
+}
+p{
+  color: black;
+  font-size: x-large;
+  font-family:URW Chancery L;
+}
+#main-content{
+  border: 1px solid black;
+  height: auto;
+  min-height: 93vh;
+}
+h1{
+  color:black;
+  font-family:URW Chancery L;
+  text-align: center;
+  margin-top: 10%;
+}
+.image{
+  background-image: url("../images/tło_div.jpg");
+  background-size: cover;
+  height: 50px;
+  text-align: center;
+
+}
+
+a:hover {
+  text-shadow: 2px 2px 2px darkslategrey;
+}
+.div{
+  left: -100px;
+}
+
+div.div:hover{
+  left: 0;
+}
+.p{
+  margin-top: 10%;
+}
+.marg{
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 15%;
+}
+.menu-hidden {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 300px;
+  height: auto;
+  border: 1px solid black;
+  min-height: 20vh;
+}
+
+.menu-visible {
+  position: absolute;
+  margin-top: 10%;
+  height: auto;
+  width: 20px;
+  min-height: 20vh;
+  border: 2px solid black;
+}
+.menu-hidden1 {
+  display: none;
+  margin-top: 10%;
+  position: absolute;
+  right: 0;
+  width: 300px;
+  height: auto;
+  border: 1px solid black;
+  min-height: 20vh;
+}
+
+.menu-visible1 {
+  right: 0;
+  position: absolute;
+  margin-top: 10%;
+  height: auto;
+  width: 20px;
+  min-height: 20vh;
+  border: 2px solid black;
+}

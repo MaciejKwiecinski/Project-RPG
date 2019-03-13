@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl" style="height: 100%">
+<head>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="menu-hidden p image">
+    <form action="{% url 'stats' %}" method="post">{{stats.as_p}}
+    {%csrf_token%}
+    <input type="submit" value="Zapisz statystyki"/>
+    </form>
+</div>
+<div class="menu-visible p image">
+    S
+    T
+    A
+    T
+    Y
+    S
+    T
+    Y
+    K
+    I
+</div>
+<div class="menu-hidden1 p image">
+    <br><br><p> W trakcie tworzenia</p>
+</div>
+<div class="menu-visible1 p image">
+    E
+    K
+    W
+    I
+    P
+    U
+    N
+    E
+    K
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="image col-4">
+	            <a href='/character' class="a">Postać</a>
+	        </div>
+	        <div class="image col-4">
+	            <a href="/" class="a">Menu główne</a>
+	        </div>
+	        <div class="image col-4">
+	            <a href="/instruction" class="a">Instrukcja</a>
+	        </div>
+        </div>
+        <div class="row">
+            <div class="image col-12"  id="main-content">
+                {%block content%}{%endblock content%}
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="../static/JS/app.js"></script>
+</html>
+

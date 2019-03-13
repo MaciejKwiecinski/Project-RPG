@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+    <p class="marg">{{event.description}}</p>
+    {%for answer in answers%}
+        <p>{{answer.description}}</p>
+        <form action="" method="post">
+        {%csrf_token%}
+        <button value="{{answer.end_id}}" name="end">Wybierz opcję</button></form>
+    {%endfor%}
+{%endblock content%}

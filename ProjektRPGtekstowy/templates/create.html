@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+    <form action="#" method="post">
+    <p class="p">Ilość punktów możliwych do rozdania na początek:<span> 5</span></p>
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Dodaj postać">
+    </form>
+{%endblock content%}
