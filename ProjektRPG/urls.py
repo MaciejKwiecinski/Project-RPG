@@ -14,15 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from ProjektRPG import settings
 from django.urls import path
-from ProjektRPGtekstowy.views import main,PlayerView,EventView,StatView,CharacterView,instruction
+from django.conf.urls.static import static
+from django.contrib.auth.views import LoginView,LogoutView
+from ProjektRPGtekstowy.views import main,PlayerView,EventView,StatView,CharacterView,instruction,signup,CharactersView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',main),
+    path('',main,name='main'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
     path('create/',PlayerView.as_view()),
     path('story/<int:id>',EventView.as_view()),
+    path('characters',CharactersView.as_view()),
     path('stats/',StatView.as_view(),name='stats'),
-    path('character/',CharacterView.as_view()),
-    path('instruction/',instruction)
-]
+    path('character/<int:id>',CharacterView.as_view()),
+    path('instruction/',instruction),
+    path('signup/',signup)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -11,13 +11,25 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="menu-hidden p image">
+{%if user.is_authenticated == True%}
+<a href="/logout/" style="margin-left: 90%; color: White;">Wyloguj</a>
+{%else%}
+<a href="/login/" style="margin-left: 90%; color: White;">Zaloguj</a>
+{%endif%}
+{%if user.is_authenticated == True%}
+<div class="menu-hidden image p">
     <form action="{% url 'stats' %}" method="post">{{stats.as_p}}
     {%csrf_token%}
     <input type="submit" value="Zapisz statystyki"/>
     </form>
 </div>
-<div class="menu-visible p image">
+{%else%}
+<div class="menu-hidden image p">
+<br><br>
+<p>Zaloguj się i wybierz postać</p>
+</div>
+{%endif%}
+<div class="menu-visible image p">
     S
     T
     A
@@ -29,10 +41,10 @@
     K
     I
 </div>
-<div class="menu-hidden1 p image">
+<div class="menu-hidden1 image p">
     <br><br><p> W trakcie tworzenia</p>
 </div>
-<div class="menu-visible1 p image">
+<div class="menu-visible1 image p">
     E
     K
     W
@@ -46,7 +58,7 @@
     <div class="container">
         <div class="row">
             <div class="image col-4">
-	            <a href='/character' class="a">Postać</a>
+	            <a href='/characters' class="a">Postać</a>
 	        </div>
 	        <div class="image col-4">
 	            <a href="/" class="a">Menu główne</a>
@@ -61,6 +73,11 @@
             </div>
         </div>
     </div>
+    <footer class="page-footer font-small blue image" style="color: black; text-decoration: none; background-color: darkgray; width: 25%; margin: 0 auto">
+      <div class="footer-copyright text-center"style="color: black; text-decoration: none;">© 2019 Copyright:
+    <a href="https://github.com/MaciejKwiecinski" style="color: black; text-decoration: none;">Maciej Kwieciński</a>
+  </div>
+</footer>
 </body>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="../static/JS/app.js"></script>

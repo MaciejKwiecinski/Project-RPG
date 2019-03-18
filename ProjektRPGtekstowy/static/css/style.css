@@ -15,6 +15,7 @@ body{
   width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 table {
   width: 100%;
@@ -22,7 +23,7 @@ table {
 .div{
   font-family:URW Chancery L;
   color:black;
-  font-size: x-large;
+  font-size: xx-large;
 }
 a{
   color:black;
@@ -38,7 +39,7 @@ p{
 #main-content{
   border: 1px solid black;
   height: auto;
-  min-height: 93vh;
+  min-height: 90vh;
 }
 h1{
   color:black;
@@ -56,13 +57,6 @@ h1{
 
 a:hover {
   text-shadow: 2px 2px 2px darkslategrey;
-}
-.div{
-  left: -100px;
-}
-
-div.div:hover{
-  left: 0;
 }
 .p{
   margin-top: 10%;
@@ -109,4 +103,15 @@ div.div:hover{
   width: 20px;
   min-height: 20vh;
   border: 2px solid black;
+}
+.position{
+  float:left;
+}
+#theme{
+  background-size: cover;
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

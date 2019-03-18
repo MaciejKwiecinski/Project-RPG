@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+    <p class="marg">Wybierz postać</p>
+    {%for character in characters%}
+        <form method="post">
+            {{character.name}}
+            <button value="{{character.id}}" name="idik">Wybierz postać</button>
+            {%csrf_token%}
+        </form><br>
+    {%endfor%}
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="/create/">Stwórz nową postać</a>
+{%endblock content%}

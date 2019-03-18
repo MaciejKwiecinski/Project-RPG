@@ -8,4 +8,14 @@
     <p>Inteligencja: {{player.inte}}</p>
     <p>Zręczność: {{player.zre}}</p>
     <p>Życie: {{player.hp}}</p>
+    <p>Ilość punktów do wydania: {{player.points}} </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    {%if player.curent_state != 0%}
+    <a href="/story/{{player.curent_state}}" class="p">Graj!</a>
+    {%else%}
+    <a href="/story/3" class="p">Graj</a>
+    {%endif%}
 {%endblock content%}

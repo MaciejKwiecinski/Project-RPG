@@ -1,6 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Player(models.Model):
+    user_players=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
     curent_state=models.IntegerField(default=0)
     name=models.CharField(max_length=255)
     level=models.IntegerField(default=1)
@@ -19,7 +21,7 @@ class Event(models.Model):
     name=models.CharField(max_length=6)
     description=models.TextField(null=True)
     image=models.ImageField(null=True)
-
+    is_random = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -30,3 +32,4 @@ class Answers(models.Model):
     description=models.TextField(null=True)
     start=models.ForeignKey(Event, related_name='r_start',on_delete=models.CASCADE)
     end=models.ForeignKey(Event, related_name='r_end',on_delete=models.CASCADE)
+    is_random = models.BooleanField(default=False)

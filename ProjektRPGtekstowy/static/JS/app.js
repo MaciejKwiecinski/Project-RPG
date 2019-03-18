@@ -10,6 +10,7 @@ $(document).ready(function () {
 
     menuHidden.mouseleave(function () {
         menuHidden.fadeOut('slow');
+        menuVisible.fadeIn('slow')
         //menuHidden.css('display', 'none');
         menuVisible.css('display', 'block');
     });
@@ -25,7 +26,11 @@ $(document).ready(function () {
 
     menuHidden1.mouseleave(function () {
         menuHidden1.fadeOut('slow');
+        menuVisible1.fadeOut('slow');
         //menuHidden.css('display', 'none');
         menuVisible1.css('display', 'block');
     });
+    var timeout = setTimeout(function () {
+    $('#theme').css('display','none')
+}, 3000);
 });
